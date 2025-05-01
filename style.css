@@ -1,0 +1,130 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Work Sans";
+}
+
+/* - Font size (paragraphs): 16px */
+
+:root {
+  --white: hsl(0, 100%, 100%);
+  --purple-100: hsl(275, 100%, 97%);
+  --purple-600: hsl(292, 16%, 49%);
+  --purple-950: hsl(292, 42%, 14%);
+}
+
+.hide {
+  display: none;
+}
+
+body {
+  background-color: var(--purple-100);
+  position: relative;
+}
+
+.accordion-card {
+  border-radius: 7px;
+  background-color: var(--white);
+  padding: 24px 24px 24px 24px;
+  margin: 50px 24px 50px 24px;
+  max-width: 329px;
+  position: absolute;
+  top: 38%;
+}
+
+.accordion-header {
+  display: flex;
+  justify-content: left;
+  gap: 24px;
+  align-items: center;
+}
+
+.accordion-item {
+  max-width: 279px;
+  display: flex;
+  flex-direction: column;
+  margin: 24px 0px 0px 0px;
+}
+
+.accordion-item p {
+  font-size: 14px;
+  font-weight: 400;
+  margin: 24px 0px 24px 0px;
+  line-height: 20px;
+}
+
+.button-click {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button-click span {
+  font-size: 16px;
+  font-weight: 600;
+  text-align: left;
+  margin: 0px 0px 0px 0px;
+  display: flex;
+  align-items: center;
+}
+
+button {
+  background-color: var(--white);
+  border: none;
+}
+
+p {
+  font-size: 16px;
+  color: var(--purple-600);
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: var(--purple-100);
+  margin: 20px 0px 24px 0px;
+}
+
+@media (min-width: 1024px) {
+  body {
+    width: 100%;
+    background-image: url("./images/background-pattern-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+
+  .background-mobile {
+    display: none;
+  }
+
+  .accordion-card {
+    max-width: 600px;
+    position: absolute;
+    top: 168px;
+    right: 420px;
+    padding: 40px;
+    margin-bottom: 50px;
+  }
+
+  .accordion-item {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    margin: 24px 0px 0px 0px;
+  }
+
+  br {
+    display: none;
+  }
+
+  .accordion-item p {
+    width: 520px;
+    font-size: 16px;
+  }
+
+  .button-click {
+    width: 520px;
+    transition: 2s;
+  }
+}
